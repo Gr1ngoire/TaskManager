@@ -139,7 +139,7 @@ extension ViewController {
     
     // function to edit the task
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        let alertController = UIAlertController(title: "Изменить задание", message: "Для изменения задания введите новое название задания", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Change Task", message: "To change the task enter its new name", preferredStyle: .alert)
 
         let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
             guard let result = alertController.textFields?.first?.text, !result.isEmpty else { return }
