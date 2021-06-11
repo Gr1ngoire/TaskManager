@@ -10,6 +10,8 @@ import CoreData
 
 class ViewController: UITableViewController {
 
+    
+    // view setup
     private let cellID = "cellID"
     private var tasks: [Task] = []
     
@@ -60,6 +62,7 @@ class ViewController: UITableViewController {
         alertFieldAction(title: "New Task", message: "What is your next task?")
     }
     
+    // func to enter the name of new task
     private func alertFieldAction(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -84,6 +87,7 @@ class ViewController: UITableViewController {
         
     }
     
+    // adding new tasks
     private func save(taskName: String) {
         
         
@@ -103,6 +107,7 @@ class ViewController: UITableViewController {
         }
     }
     
+    // updating array with new task data
     private func rollData() {
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
         
